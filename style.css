@@ -8,7 +8,8 @@
 }
 
 body {
-    background-color: #1D212B;
+    background-color: #f7f7f7;
+    font-size: 16px;
 }
 
 section {
@@ -16,66 +17,70 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 section:nth-child(1) {
-    color: #fff;
+    color: #f7f7f7;
 }
 
 section:nth-child(2) {
-    color: #1D212B;
-    background: #fff;
+    color: #f2e041;
+    background: #f7f7f7;
 }
 
 section:nth-child(3) {
-    color: #fff;
+    color: #f7f7f7;
 }
 
 section:nth-child(4) {
-    color: #1D212B;
-    background: #fff;
+    color: #6841f2;
+    background: #f7f7f7;
 }
 
 section.container {
-    margin: 100px;
+    margin: 5vw;
 }
 
 section h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 600;
 }
 
-section h2{
-    font-size: 40px;
+section h2 {
+    font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
 }
 
 section .cards {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
 }
 
 section .cards .text-card {
-    background-color: #2696e9;
-    margin: 20px;
-    padding: 20px;
+    background-color: #6841f2;
+    padding: 1.25rem;
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 section .cards .text-card h3 {
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    cursor: pointer;
+
 }
-
-@media (max-width: 900px) {
-    section h1 {
-        font-size: 40px;
-    }
-    section .cards {
-        flex-direction: column;
-    }
-
+.text-card:hover{
+    transition: 0.5s;   
+    opacity: 0.8;
+}
+.text-card:active{
+    opacity:0.3;
 }
 
 .reveal {
@@ -95,14 +100,79 @@ section .cards .text-card h3 {
     align-items: center;
 }
 
+/* Logo image */
 .logo img {
-    max-height: 50px; /* Adjust this value to fit your design */
-    width: auto;
+    max-width: 400px;
+    max-height: 300px; 
+    width: auto; 
+    height: auto; 
 }
 
-/* For smaller screens */
+/* Further reduce the size for smaller screens */
 @media (max-width: 768px) {
-    .logo {
-        max-width: 150px; /* Smaller size for mobile devices */
+    .logo img {
+        max-width: 100px;
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 80px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    section h1 {
+        font-size: 3rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    section h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .logo img {
+        max-height: 25px; /* Reduced from 40px */
+    }
+}
+
+@media (max-width: 480px) {
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section .cards .text-card h3 {
+        font-size: 1.125rem;
     }
 }
